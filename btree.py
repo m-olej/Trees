@@ -12,7 +12,10 @@ class Node:
         self.right = None
         # Wysokość na jakiej znajduje się wartość
         self.height = 0
-        
+    
+    def __str__(self) -> str:
+        return f"Wartość: [{self.value}] - {self.height}, Dzieci: Lewe: \n {self.left} \t Prawe: {self.right} \n " 
+    
     # --- Dodaje i ustala na jakiej wysokości jest każdy element --- #
     def add(self, value, height=0):
         if self.value:
@@ -32,6 +35,15 @@ class Node:
         else:
             self.value = value
 
+    def getHeight(self, heightList = []):
+        if self.left is None and self.right is None:
+            heightList.append(self.height)
+        if self.left:
+            self.left.getHeight(heightList)
+        if self.right:
+            self.right.getHeight(heightList)
+        return max(heightList)
+    
     # --- oblicza ilość elementów w drzewie --- #
     def getNumNodes(self):
         total = 0
@@ -40,7 +52,7 @@ class Node:
         if self.right:
             total += self.right.getNumNodes()
         return total + 1
-    
+
 
 # Rekurencyjne przeszukiwanie drzewa
 #IN-ORDER
@@ -65,22 +77,28 @@ def binarySplit(arr):
     return binarySplit(right_half) + binarySplit(left_half) + [middle_element]
 
 def CreateAVLTree(arr):
+    arr.sort()
     binList = binarySplit(arr)
     binList.reverse()
     root = Node()
     for n in binList:
         root.add(n)
+    return root
 
 def CreateTree(arr):
     root = Node()
     for n in arr:
         root.add(n)
+    return root
+    
+def printTree(root):
     
 
 testList = [1,2,3,4,5,6,7,8,9,10,11,12]
+testList2 = [x for x in range(40)]
 
+avl = CreateAVLTree(testList)
 
-CreateAVLTree(testList)
 
 
 

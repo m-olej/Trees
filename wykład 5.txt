@@ -1,0 +1,12 @@
+Drzewa czerwono-czarne 
+Na każdej ścieżce od wybranego elementu znajduje się taka sama liczba elementów "czarnych". Liściami tego drzewa zawsze są elementy puste "nil", kolorowane na czarno. 
+Drzewo czerwono-czarne jest w przybliżeniu zrównoważone.
+Wysokość w tych drzewach jest obliczana od liścia do korzenia.
+Wstawiane elementy do drzewa czerwono-czarnego zawsze są czerwone, a potem są zmieniane na podstawie przypadku położenia. Rekurencyjne sprawdzanie warunków idące od wstawianego "liścia" w górę, jeśli potrzeba.
+
+
+Lista jednokierunkowa:
+Każdy element zawiera komponent i wskaźnik na następnika. Jest to struktura dynamiczna jej rozmiar może zmieniać się wedle potrzeb w czasie działania programu. Usuwanie i dodawanie elementów jest prostsze od robienia tego w tablicy, lecz odczyt danych jest wolniejszy niż w tablicy.
+Konstruowanie listy:
+1. Wstawianie do listy (głowy), pierwszy element
+2. Dodajemy kolejne elementy zachowując przyjęty porządek 
