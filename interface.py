@@ -71,7 +71,11 @@ def operation_on_tree():
         if choice in ['1', '2', '3', '4', '5', '6', '7', '8'] or choice == "ESC" or choice == "BACK":
             return choice
         else:
+            print("")
             print("Błędna odpowidź! Proszę wprowadzić jeszcze raz.")
+            time.sleep(0.8)
+            print("")
+
 def usuwacz():
     global to_make
     global data
