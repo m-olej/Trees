@@ -261,15 +261,20 @@ testList = [x for x in range(1, 41)]
 testList2 = [6, 4, 3, 7, 2, 10, 5, 9, 10]
 degTest = [x for x in range(1, 16)]
 
+inTest = [6,5,4,3,2]
+
 # --- TEST ZONE --- #
 
 root1 = Node()
 root2 = Node()
 root3 = Node()
+root4 = Node()
 
-avl = root1.MakeAvl(testList2)
-avl2 = root3.MakeAvl(testList)
+avl = root1.MakeAvl(testList)
+avl2 = root3.MakeAvl(testList2)
 bst = root2.MakeBst(degTest)
+
+inAvl = root4.MakeAvl(inTest)
 
 # print(avl)
 # print(avl.getHeight())
@@ -292,6 +297,17 @@ bst = root2.MakeBst(degTest)
 # bst.degPrint()
 # bst.delNode(15)
 # bst.degPrint()
-avl.prettyPrint()
-avl.delNode(4)
-avl.prettyPrint()
+# avl.prettyPrint()
+# avl.delNode(4)
+# avl.prettyPrint()
+# avl.delNode()
+# avl.prettyPrint()
+# print("\n")
+avl2.prettyPrint()
+# print("\n")
+# avl2.delNode(4)
+# avl2.delNode(7)
+# avl2.prettyPrint()
+# bst.degPrint()
+
+inAvl.prettyPrint()
