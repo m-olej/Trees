@@ -38,5 +38,7 @@
 # level /= 2
 # print(level)
 
-if 0:
+one = 1
+zero = 0
+if one and zero == 0:
     print("checl")
